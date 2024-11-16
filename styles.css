@@ -1,5 +1,6 @@
 *{
     scroll-behavior:smooth;
+    overflow-x: hidden;
   }
   
   body{
@@ -8,9 +9,10 @@
     box-sizing:border-box;
     font-family:Sans-serif;
     background-color:#1a1a1a;
+    overflow: hidden;
   }
   
-  nav{
+  .main-navigation{
     height:84px;
     width:100vw;
     top:0;
@@ -21,6 +23,53 @@
     justify-content:space-between; 
     background-color:#111111;
     box-shadow: 8px 1px 12px 6px #cccccc;
+  }
+
+  .top-nav-equation{
+    position: absolute;
+  }
+
+  .top-nav-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .top-nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 40%;
+    left: 20%;
+    gap: 10px;
+    margin-right: -82px;
+  }
+
+  .top-nav-btn{
+    width: 86px;
+    height: 30px;
+    position: absolute;
+    top: 15px;
+    margin-top: 12px;
+    right: 0;
+    margin-right: 45px;
+    background-color:#9e9b9b;
+    color:#fff;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    transition: .3s ease-in-out;
+  }
+
+  .top-nav-btn:hover{
+    background-color: #cccccc;
+    color: #1a1a1a;
+  }
+
+  .fas.fa-bars{
+    display: none;
   }
   
   nav > ul{
@@ -96,6 +145,13 @@
     color:#cccccc;
     text-align:center;
   }
+
+  .albert-images{
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+    margin-left:38px;
+  }
   
   h2{
     text-align:center;
@@ -144,7 +200,17 @@
     justify-content:center;
     gap:16px;
     flex-wrap:wrap;
-    margin-top:56px;
+    padding: 32px auto;
+  }
+
+  .side-div:first-of-type{
+    margin-left: 20%;
+  }
+
+  .side-div:last-of-type{
+    margin-left:20%;
+    margin-right:20%;
+    margin-bottom: 32px;
   }
   
   .side-div{
@@ -166,4 +232,187 @@
   footer > p >a{
     text-decoration:none;
   }
-  
+
+  .top-nav-items{
+    display: flex;
+  }
+
+  .side-navigation{
+    width:250;
+    height: 100vh;
+    background-color:#363636;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    display: none;
+  }
+
+  .side-navigation-content{
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fa-bars{
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: #454f55;
+    font-size: 30px;
+    transition: .3s ease-in-out;
+    display: none;
+    cursor: pointer;
+  }
+
+  .fa-bars:hover{
+    color: #888585;
+  }
+
+  .fa-times{
+    position: absolute;
+    top: 8px;
+    left:8px;
+    font-size: 25px;
+    color:#888585;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }
+
+  .fa-times:hover{
+    color: #cccccc;
+  }
+
+  .side-equation{
+    color: #5a656b;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }
+
+  .side-equation:hover{
+    color: #9e9b9b;
+  }
+
+  .nav-rule{
+    width:90%;
+    border-color: #7b8991;
+  }
+
+  .side-nav-list li{
+    list-style-type:none;
+    font-size: 18px;
+    transition: .3s ease-in-out;
+  }
+
+  .side-nav-list > li > a{
+    color:#6c787f;
+  }
+  .side-nav-list > li > a:hover{
+    color:#c5ced3;
+  }
+
+  .side-nav-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+  }
+
+  .footer-icons{
+    display: flex;
+    gap: 12px;
+  }
+
+  .icon{
+    color: #454f55;
+    transition: .3s ease-in-out;
+  }
+
+  .icon:hover{
+    color: #9e9b9b;
+  }
+
+
+  @media(max-width:720px){
+    .top-nav-items{
+      display: none;
+    }
+
+    .fas.fa-bars{
+      display: flex;
+    }
+
+    .equation{
+      position: absolute;
+      top: 25px;
+      right: 0;
+      margin-right: 43px;
+      color: #454f55;
+      transition: .3s ease-in-out;
+    }
+    .equation:hover{
+      color:#888585;
+    }
+
+    .title{
+      font-size: 52px;
+    }
+
+    .nobel{
+      font-size: 24px;
+    }
+  }
+
+  @media(max-width:640px){
+    .card{
+      width: 160px;
+      height: 150px;
+      font-size: 18px;
+    }
+    #title{
+      font-size: 45px;
+    }
+
+    .nobel{
+      font-size: 18px;
+    }
+
+    .image-gallery-header{
+      font-size: 22px;
+    }
+
+    
+    .gallery-image{
+      height: 86px;
+    }
+  }
+
+  @media(max-width:480px){
+    .albert-images{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-image{
+      height: 95px;
+    }
+
+    
+  }
+
+  @media(max-width:320px){
+    .card{
+      width:75px;
+      height: 45px;
+      font-size: 12px;
+    }
+
+    
+
+    .albert-images{
+      display: flex;
+      flex-direction: column;
+    }
+  }
